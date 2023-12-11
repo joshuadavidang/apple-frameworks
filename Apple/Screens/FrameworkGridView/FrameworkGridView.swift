@@ -13,18 +13,20 @@ struct FrameworkGridView: View {
     
     var body: some View {
         NavigationView(content: {
-            LazyVGrid(columns: viewModel.columns) {
-                ForEach(MockData.frameworks) { framework in
-                    FrameworkTitleView(framework: framework)
-                        .onTapGesture {
-                            viewModel.selectedFramework = framework
-                        }
+            ScrollView {
+                LazyVGrid(columns: viewModel.columns) {
+                    ForEach(MockData.frameworks) { framework in
+                        FrameworkTitleView(framework: framework)
+                            .onTapGesture {
+                                viewModel.selectedFramework = framework
+                            }
+                    }
                 }
-            }
-            
-            .navigationTitle(" Frameworks")
-            .sheet(isPresented: $viewModel.isShowingDetailView) {
-                FrameworkDetailsView(framework: viewModel.selectedFramework!, isShowingDetailView: $viewModel.isShowingDetailView)
+                
+                .navigationTitle(" Frameworks")
+                .sheet(isPresented: $viewModel.isShowingDetailView) {
+                    FrameworkDetailsView(framework: viewModel.selectedFramework!, isShowingDetailView: $viewModel.isShowingDetailView)
+                }
             }
         })
     }
