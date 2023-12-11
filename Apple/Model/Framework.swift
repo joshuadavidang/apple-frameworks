@@ -18,11 +18,11 @@ struct Framework: Hashable, Identifiable {
 struct MockData {
     
     static let sampleFramework = Framework(name: "Wallet",
-                                     imageName: "wallet",
-                                     urlString: "https://developer.apple.com/wallet/get-started",
-                                     description: "The Wallet app on iPhone, iPod touch, and Apple Watch allows users to easily manage payment cards, boarding passes, tickets, gift cards, and other passes.\n\nWallet is time and location enabled, so passes can be configured to display on the user’s device at the appropriate moment, like when the user reaches the airport or walks into a store.\n\nPasses can also be updated with push notifications so, if details change, you can notify the user and they can simply tap the notification to view the updated pass.")
-
-        
+                                           imageName: "wallet",
+                                           urlString: "https://developer.apple.com/wallet/get-started",
+                                           description: "The Wallet app on iPhone, iPod touch, and Apple Watch allows users to easily manage payment cards, boarding passes, tickets, gift cards, and other passes.\n\nWallet is time and location enabled, so passes can be configured to display on the user’s device at the appropriate moment, like when the user reaches the airport or walks into a store.\n\nPasses can also be updated with push notifications so, if details change, you can notify the user and they can simply tap the notification to view the updated pass.")
+    
+    
     static let frameworks = [
         Framework(name: "App Clips",
                   imageName: "app-clip",
@@ -43,7 +43,7 @@ struct MockData {
                   imageName: "catalyst",
                   urlString: "https://developer.apple.com/mac-catalyst",
                   description: "Native Mac apps built with Mac Catalyst can share code with your iPad apps, and you can add more features just for Mac. In macOS Big Sur, you can create even more powerful versions of your apps and take advantage of every pixel on the screen by running them at native Mac resolution.\n\nApps built with Mac Catalyst can now be fully controlled using just the keyboard, access more iOS frameworks, and take advantage of the all-new look of macOS Big Sur. There’s never been a better time to turn your iPad app into a powerful Mac app."),
-
+        
         Framework(name: "ClassKit",
                   imageName: "classkit",
                   urlString: "https://developer.apple.com/classkit",
